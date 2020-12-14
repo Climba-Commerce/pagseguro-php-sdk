@@ -27,16 +27,14 @@ namespace PagSeguro\Parsers\Transaction\Search\Code;
 use PagSeguro\Enum\Properties\Current;
 use PagSeguro\Parsers\Error;
 use PagSeguro\Parsers\Parser;
-use PagSeguro\Parsers\Transaction\Search\Code\Response;
 use PagSeguro\Resources\Http;
 
 /**
- * Class Payment
- * @package PagSeguro\Parsers\Checkout
+ * Class Request
+ * @package PagSeguro\Parsers\Transaction\Search\Code
  */
 class Request extends Error implements Parser
 {
-
     /**
      * @param $code
      * @return array
@@ -79,7 +77,8 @@ class Request extends Error implements Parser
             ->setItems($xml->items)
             ->setSender($xml->sender)
             ->setShipping($xml->shipping)
-            ->setPromoCode(current($xml->promoCode));
+            ->setPromoCode(current($xml->promoCode))
+			->setCancelationSource(current($xml->cancellationSource));
         return $response;
     }
 

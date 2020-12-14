@@ -3,8 +3,11 @@ Biblioteca de integração PagSeguro para PHP
 
 [![Code Climate](https://codeclimate.com/github/pagseguro/pagseguro-php-sdk/badges/gpa.svg)](https://codeclimate.com/github/pagseguro/pagseguro-php-sdk)
 [![Total Downloads](https://poser.pugx.org/pagseguro/pagseguro-php-sdk/d/total.svg)](https://packagist.org/packages/pagseguro/pagseguro-php-sdk)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%207.1.3-blue.svg?style=flat-square)](https://php.net/)
 [![Latest Stable Version](https://poser.pugx.org/pagseguro/pagseguro-php-sdk/v/stable.svg)](https://packagist.org/packages/pagseguro/pagseguro-php-sdk)
 [![Latest Unstable Version](https://poser.pugx.org/pagseguro/pagseguro-php-sdk/v/unstable.svg)](https://packagist.org/packages/pagseguro/pagseguro-php-sdk)
+
+> Caso você deseje usar uma versão abaixo do PHP 7.1.3 por favor consulte o branch https://github.com/pagseguro/pagseguro-php-sdk/tree/5.x.x
 
 Descrição
 ---------
@@ -24,7 +27,7 @@ A biblioteca PagSeguro em PHP é um conjunto de classes de domínio que facilita
 Requisitos
 ----------
 
- - [PHP] 5.4.27+ || 5.5+ || 5.6+
+ - [PHP] ^7.1.3
  - [SPL]
  - [cURL]
  - [SimpleXml]
@@ -51,7 +54,7 @@ Instalação
   ```composer.json
   {
       "require": {
-         "pagseguro/pagseguro-php-sdk" : "*"
+         "pagseguro/pagseguro-php-sdk" : "^6.0"
       }
   }
   ```
@@ -77,7 +80,7 @@ Para saber mais sobre como configurar a biblioteca acesse a [documentação](/pu
 Dúvidas?
 ----------
 ---
-Caso tenha dúvidas ou precise de suporte, acesse nosso [fórum].
+Caso tenha dúvidas ou precise de suporte, abra um chamado conosco [link].
 
 
 Changelog
@@ -104,8 +107,6 @@ Notas
  - Certifique-se que o email e o token informados estejam relacionados a uma conta que possua o perfil de vendedor ou empresarial.
  - Certifique-se que tenha definido corretamente o charset de acordo com a codificação (ISO-8859-1 ou UTF-8) do seu sistema. Isso irá prevenir que as transações gerem possíveis erros ou quebras ou ainda que caracteres especiais possam ser apresentados de maneira diferente do habitual.
  - Para que ocorra normalmente a geração de logs, certifique-se que o diretório e o arquivo de log tenham permissões de leitura e escrita.
- - Para a utilizar o checkout transparente, é necessária a solicitação de ativação junto com a equipe do PagSeguro, maiores informações podem ser encontradas em [Como receber pagamentos pelo PagSeguro].
-
 
 Dúvidas?
 ----------
@@ -134,7 +135,7 @@ Achou e corrigiu um bug ou tem alguma feature em mente e deseja contribuir?
   [Consultar Transações por Código]: https://devs.pagseguro.uol.com.br/docs/pagamento-recorrente-consulta-pelo-codigo-de-adesao
   [Consultar Transações por Intervalo de Datas]: https://devs.pagseguro.uol.com.br/docs/pagamento-recorrente-consulta-por-intervalo-de-datas
   [Receber Notificações]: https://devs.pagseguro.uol.com.br/docs/checkout-web-notificacoes
-  [fórum]: https://comunidade.pagseguro.uol.com.br/hc/pt-br/community/topics
+  [link]: https://app.pipefy.com/public/form/k8aKYyJE/?_ga=2.175732066.1759255508.1544013668-532205691.1540442951
   [PHP]: http://www.php.net/
   [SPL]: http://php.net/manual/en/book.spl.php
   [cURL]: http://php.net/manual/en/book.curl.php

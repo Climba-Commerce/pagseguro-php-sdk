@@ -1,3 +1,18 @@
+### 6.0.0 (29/11/2018)
+
+#### Implementações
+   * A lib foi atualizada para funcionar no PHP 7.1.3 em diante
+
+#### 5.0.1 (14/11/2018)
+
+#### Implementações
+  * checagem para número de telefone e código de area
+
+### 5.0.0 (21/10/2018)
+
+#### Implementações
+   * novos casos de testes foram implementados
+   
 ### 4.2.1 (16/08/2018)
 
 #### Correções

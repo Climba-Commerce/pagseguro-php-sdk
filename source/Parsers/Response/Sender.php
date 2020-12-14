@@ -28,7 +28,7 @@ use PagSeguro\Domains\Document;
 use PagSeguro\Domains\Phone;
 
 /**
- * Class Sender
+ * Trait Sender
  * @package PagSeguro\Parsers\Response
  */
 trait Sender
@@ -37,6 +37,7 @@ trait Sender
      * @var
      */
     private $sender;
+
     /**
      * @return mixed
      */
@@ -52,8 +53,12 @@ trait Sender
     public function setSender($sender)
     {
         $phone = new Phone();
-        $phone->setAreaCode(current($sender->phone->areaCode))
-              ->setNumber(current($sender->phone->number));
+
+        if (isset($sender->phone)) {
+            $phone
+                ->setAreaCode(current($sender->phone->areaCode))
+                ->setNumber(current($sender->phone->number));
+        }
 
         $senderClass = new \PagSeguro\Domains\Sender();
         $this->sender = $senderClass->setName(current($sender->name))
