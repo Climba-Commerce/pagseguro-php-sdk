@@ -1,7 +1,6 @@
 {
-  "name": "uol-pagseguro-moscou/pagseguro-php-sdk",
+  "name": "idealizetecnologia/pagseguro-php-sdk",
   "description": "Biblioteca de integração com o PagSeguro",
-  "license": "Apache-2.0",
   "authors": [
     {
       "name": "PagSeguro"
